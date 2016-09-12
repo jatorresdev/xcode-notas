@@ -15,8 +15,6 @@ class NotasListaTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        cargarNotas()
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -63,6 +61,8 @@ class NotasListaTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        cargarNotas()
+        
         return notas.count
     }
 
@@ -75,18 +75,40 @@ class NotasListaTableViewController: UITableViewController {
         return cell
     }
     
+     // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            
+            let nota = notas[indexPath.row]
+            notas.removeAtIndex(indexPath.row)
+            managedObjectContext.deleteObject(nota)
+            
+            do {
+                try managedObjectContext.save()
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                
+            } catch let error as NSError {
+                NSLog("\(error.localizedFailureReason)")
+            }
+            
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
     func cargarNotas() {
         let entityDescription = NSEntityDescription.entityForName("Notas",
-                                              inManagedObjectContext: managedObjectContext)
+                                                                  inManagedObjectContext: managedObjectContext)
         let request = NSFetchRequest()
         request.entity = entityDescription
-        
         
         do {
             let results = try managedObjectContext.executeFetchRequest(request)
             
             if results.count > 0 {
                 notas = results as! [Notas]
+                notas = notas.reverse()
             }
             
         } catch let error as NSError {
@@ -99,18 +121,6 @@ class NotasListaTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
     }
     */
 
