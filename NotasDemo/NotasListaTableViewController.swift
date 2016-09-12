@@ -71,7 +71,14 @@ class NotasListaTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("NotasTableCell", forIndexPath: indexPath) as UITableViewCell
         
         let nota = notas[indexPath.row]
-        cell.textLabel!.text = nota.descripcion
+        
+        if ((nota.descripcion)!.isEmpty) {
+            cell.textLabel!.text = "(Nota vacía)"
+        } else {
+            cell.textLabel!.text = nota.descripcion
+        }
+        
+        
         return cell
     }
     
