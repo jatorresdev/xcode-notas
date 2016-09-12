@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3716E6911D866BD70054EEAB /* NotasListaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716E6901D866BD70054EEAB /* NotasListaTableViewController.swift */; };
+		3716E6931D867C9B0054EEAB /* NotaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716E6921D867C9B0054EEAB /* NotaDetalleViewController.swift */; };
 		373330B91D839E2800000AAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373330B81D839E2800000AAB /* AppDelegate.swift */; };
-		373330BB1D839E2800000AAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373330BA1D839E2800000AAB /* ViewController.swift */; };
 		373330BE1D839E2800000AAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373330BC1D839E2800000AAB /* Main.storyboard */; };
 		373330C11D839E2800000AAB /* NotasDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 373330BF1D839E2800000AAB /* NotasDemo.xcdatamodeld */; };
 		373330C31D839E2800000AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373330C21D839E2800000AAB /* Assets.xcassets */; };
 		373330C61D839E2800000AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373330C41D839E2800000AAB /* LaunchScreen.storyboard */; };
 		373330D11D839E2800000AAB /* NotasDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373330D01D839E2800000AAB /* NotasDemoTests.swift */; };
 		373330DC1D839E2800000AAB /* NotasDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373330DB1D839E2800000AAB /* NotasDemoUITests.swift */; };
+		373330F21D83A17500000AAB /* Notas+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373330F01D83A17500000AAB /* Notas+CoreDataProperties.swift */; };
+		373330F31D83A17500000AAB /* Notas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373330F11D83A17500000AAB /* Notas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3716E6901D866BD70054EEAB /* NotasListaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotasListaTableViewController.swift; sourceTree = "<group>"; };
+		3716E6921D867C9B0054EEAB /* NotaDetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotaDetalleViewController.swift; sourceTree = "<group>"; };
 		373330B51D839E2800000AAB /* NotasDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotasDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373330B81D839E2800000AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		373330BA1D839E2800000AAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		373330BD1D839E2800000AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		373330C01D839E2800000AAB /* NotasDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotasDemo.xcdatamodel; sourceTree = "<group>"; };
 		373330C21D839E2800000AAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +53,9 @@
 		373330D71D839E2800000AAB /* NotasDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotasDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		373330DB1D839E2800000AAB /* NotasDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotasDemoUITests.swift; sourceTree = "<group>"; };
 		373330DD1D839E2800000AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373330E91D83A10900000AAB /* NotasDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotasDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		373330F01D83A17500000AAB /* Notas+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notas+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		373330F11D83A17500000AAB /* Notas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +86,13 @@
 		373330AC1D839E2800000AAB = {
 			isa = PBXGroup;
 			children = (
+				373330F01D83A17500000AAB /* Notas+CoreDataProperties.swift */,
+				373330F11D83A17500000AAB /* Notas.swift */,
 				373330B71D839E2800000AAB /* NotasDemo */,
 				373330CF1D839E2800000AAB /* NotasDemoTests */,
 				373330DA1D839E2800000AAB /* NotasDemoUITests */,
 				373330B61D839E2800000AAB /* Products */,
+				373330E91D83A10900000AAB /* NotasDemo-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				373330B81D839E2800000AAB /* AppDelegate.swift */,
-				373330BA1D839E2800000AAB /* ViewController.swift */,
 				373330BC1D839E2800000AAB /* Main.storyboard */,
 				373330C21D839E2800000AAB /* Assets.xcassets */,
 				373330C41D839E2800000AAB /* LaunchScreen.storyboard */,
 				373330C71D839E2800000AAB /* Info.plist */,
 				373330BF1D839E2800000AAB /* NotasDemo.xcdatamodeld */,
+				3716E6901D866BD70054EEAB /* NotasListaTableViewController.swift */,
+				3716E6921D867C9B0054EEAB /* NotaDetalleViewController.swift */,
 			);
 			path = NotasDemo;
 			sourceTree = "<group>";
@@ -259,7 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373330BB1D839E2800000AAB /* ViewController.swift in Sources */,
+				3716E6931D867C9B0054EEAB /* NotaDetalleViewController.swift in Sources */,
+				373330F21D83A17500000AAB /* Notas+CoreDataProperties.swift in Sources */,
+				373330F31D83A17500000AAB /* Notas.swift in Sources */,
+				3716E6911D866BD70054EEAB /* NotasListaTableViewController.swift in Sources */,
 				373330C11D839E2800000AAB /* NotasDemo.xcdatamodeld in Sources */,
 				373330B91D839E2800000AAB /* AppDelegate.swift in Sources */,
 			);
@@ -405,10 +419,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NotasDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.angeltorres.NotasDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NotasDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -416,10 +433,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NotasDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.angeltorres.NotasDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NotasDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -488,6 +507,7 @@
 				373330E21D839E2800000AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		373330E31D839E2800000AAB /* Build configuration list for PBXNativeTarget "NotasDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +516,7 @@
 				373330E51D839E2800000AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		373330E61D839E2800000AAB /* Build configuration list for PBXNativeTarget "NotasDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +525,7 @@
 				373330E81D839E2800000AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
