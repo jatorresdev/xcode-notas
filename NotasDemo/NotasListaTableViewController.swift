@@ -38,10 +38,7 @@ class NotasListaTableViewController: UITableViewController {
             notaDetalleViewController.nota = notas[row]
             
         } else if segue.identifier == "anadirNota" {
-//            let nota = Notas()
-//            nota.descripcion = " "
-//            let notaDetalleViewController = segue.destinationViewController as! NotaDetalleViewController
-//            notaDetalleViewController.nota = nota
+            // Parametros si es necesario
             
         }
     }
